@@ -1,0 +1,571 @@
+/* Back Button */
+.phb-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #fff8f0;
+  color: #e56717;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid #feebc8;
+}
+
+.phb-back-button:hover {
+  background-color: #ff8c38;
+  color: white;
+  transform: translateX(-5px);
+}
+
+/* Article Container */
+.phb-article-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section */
+.phb-article-hero {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ff8c38 0%, #e56717 100%);
+  border-radius: 12px;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(229, 103, 23, 0.25);
+}
+
+.phb-article-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  animation: phb-rotate 20s linear infinite;
+}
+
+.phb-article-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.phb-article-subtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Main Content */
+.phb-article-content {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.phb-article-section {
+  margin-bottom: 40px;
+}
+
+.phb-article-section h2 {
+  font-size: 1.8rem;
+  color: #e56717;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ff8c38;
+}
+
+.phb-article-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+/* Callout Boxes */
+.phb-article-callout {
+  background-color: #fff8f0;
+  border-left: 4px solid #ff8c38;
+  padding: 20px;
+  border-radius: 0 8px 8px 0;
+  margin: 30px 0;
+}
+
+.phb-article-callout h3 {
+  color: #e56717;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Benefit Cards */
+.phb-benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.phb-benefit-card {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #edf2f7;
+}
+
+.phb-benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.phb-benefit-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #ff8c38;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.phb-benefit-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #e56717;
+}
+
+.phb-benefit-card p {
+  margin-bottom: 15px;
+}
+
+.phb-benefit-card ul {
+  padding-left: 20px;
+}
+
+.phb-benefit-card li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Expert Quote */
+.phb-expert-quote {
+  background-color: #fff8f0;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 40px 0;
+  position: relative;
+  border: 1px solid #feebc8;
+}
+
+.phb-expert-quote p {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.phb-expert-quote cite {
+  display: block;
+  text-align: right;
+  font-weight: 600;
+  color: #e56717;
+}
+
+/* Statistics Highlight */
+.phb-stat-highlight {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.phb-stat {
+  background-color: #fff8f0;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #feebc8;
+}
+
+.phb-stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e56717;
+  margin-bottom: 10px;
+}
+
+.phb-stat-text {
+  color: #2d3748;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Activity Cards */
+.phb-activity-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.phb-activity-card {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #edf2f7;
+  transition: transform 0.3s ease;
+}
+
+.phb-activity-card:hover {
+  transform: translateY(-5px);
+}
+
+.phb-activity-icon {
+  color: #ff8c38;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.phb-activity-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #e56717;
+}
+
+.phb-activity-card p {
+  margin-bottom: 15px;
+}
+
+.phb-activity-benefit {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #edf2f7;
+}
+
+.phb-activity-benefit strong {
+  color: #e56717;
+}
+
+/* Activity Highlight */
+.phb-activity-highlight {
+  background-color: #fff8f0;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 30px 0;
+  border: 1px solid #feebc8;
+}
+
+.phb-activity-highlight h3 {
+  color: #e56717;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Immunity Grid */
+.phb-immunity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.phb-immunity-card {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #edf2f7;
+}
+
+.phb-immunity-icon {
+  color: #ff8c38;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.phb-immunity-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #e56717;
+}
+
+.phb-immunity-card p {
+  margin-bottom: 15px;
+}
+
+.phb-immunity-card ul {
+  padding-left: 20px;
+}
+
+.phb-immunity-card li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Research Highlight */
+.phb-research-highlight {
+  background-color: #fff8f0;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 30px 0;
+  border: 1px solid #feebc8;
+}
+
+.phb-research-highlight h3 {
+  color: #e56717;
+  margin-bottom: 15px;
+}
+
+.phb-research-highlight p {
+  margin-bottom: 15px;
+}
+
+.phb-research-highlight p:last-child {
+  margin-bottom: 0;
+}
+
+/* Stress Benefits */
+.phb-stress-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.phb-stress-benefit {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #edf2f7;
+}
+
+.phb-stress-icon {
+  color: #ff8c38;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.phb-stress-benefit h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #e56717;
+}
+
+.phb-stress-benefit p {
+  margin-bottom: 0;
+}
+
+/* Sidebar Note */
+.phb-sidebar-note {
+  background-color: #fff8f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px 0;
+  border: 1px solid #feebc8;
+}
+
+.phb-sidebar-note h4 {
+  color: #e56717;
+  margin-bottom: 10px;
+}
+
+.phb-sidebar-note p {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+/* Special Populations */
+.phb-special-populations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.phb-population {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #edf2f7;
+}
+
+.phb-population h3 {
+  color: #e56717;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.phb-population p {
+  margin-bottom: 10px;
+}
+
+.phb-population ul {
+  padding-left: 20px;
+}
+
+.phb-population li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Strategies */
+.phb-strategies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.phb-strategy {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #edf2f7;
+}
+
+.phb-strategy h3 {
+  color: #e56717;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.phb-strategy p {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+/* Tips Box */
+.phb-tips-box {
+  background-color: #fff8f0;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 30px 0;
+  border: 1px solid #feebc8;
+}
+
+.phb-tips-box h3 {
+  color: #e56717;
+  margin-bottom: 15px;
+}
+
+.phb-tips-list {
+  padding-left: 20px;
+}
+
+.phb-tips-list li {
+  margin-bottom: 10px;
+  color: #2d3748;
+}
+
+/* Conclusion */
+.phb-article-conclusion {
+  background-color: #fff8f0;
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 40px;
+  border: 1px solid #feebc8;
+}
+
+.phb-conclusion-cta {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 30px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #edf2f7;
+}
+
+.phb-conclusion-cta h3 {
+  color: #ff8c38;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.phb-conclusion-cta p {
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+.phb-button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.phb-primary-button {
+  background-color: #ff8c38;
+  color: white;
+}
+
+.phb-primary-button:hover {
+  background-color: #e56717;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(229, 103, 23, 0.3);
+}
+
+/* Animation */
+@keyframes phb-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .phb-article-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .phb-article-content {
+    padding: 20px;
+  }
+  
+  .phb-benefits-grid,
+  .phb-stat-highlight,
+  .phb-activity-cards,
+  .phb-immunity-grid,
+  .phb-stress-benefits,
+  .phb-special-populations,
+  .phb-strategies {
+    grid-template-columns: 1fr;
+  }
+  
+  .phb-article-callout,
+  .phb-article-conclusion {
+    padding: 20px;
+  }
+}

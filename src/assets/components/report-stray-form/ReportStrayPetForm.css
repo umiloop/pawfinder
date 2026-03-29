@@ -1,0 +1,516 @@
+/* StrayAnimalReport.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.form-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  text-align: left;
+  margin: 30px auto;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.input-group .input {
+  flex: 1;
+}
+
+.textarea {
+  width: 100%;
+  height: 80px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  outline: none;
+  resize: vertical;
+}
+
+.upload-box {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-label {
+  display: block;
+  cursor: pointer;
+}
+
+.photo-preview-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.preview-item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.pet-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.remove-photo {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.remove-photo:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.add-more {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.add-more p {
+  font-size: 14px;
+  color: #666;
+}
+
+.upload-instructions {
+  font-size: 14px;
+  color: #666;
+}
+
+.upload-note {
+  font-size: 12px;
+  color: #888;
+}
+
+.gender-group {
+  display: flex;
+  gap: 10px;
+}
+
+.gender-button {
+  flex: 1;
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.gender-button:hover {
+  background: #f0f0f0;
+  border-color: #aaa;
+}
+
+.gender-button.active {
+  background: #ff5722;
+  color: white;
+  border-color: #ff5722;
+}
+
+.gender-button.active:hover {
+  background: #e64a19;
+}
+
+.error-message {
+  color: #f44336;
+  font-size: 12px;
+  margin-top: 3px;
+  margin-bottom: 0;
+}
+
+/* Map container */
+.map-wrapper {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  height: 300px;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Submit Button */
+.submit-button {
+  flex: 2;
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.submit-button:hover {
+  background: #e64a19;
+}
+
+/* Clear Button */
+.clear-button {
+  flex: 1;
+  background: white;
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.clear-button:hover {
+  background: #f0f0f0;
+}
+
+/* Search elements */
+.search-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.search-button {
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 0 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background: #e64a19;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 15px;
+    margin: 15px auto;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .gender-group {
+    flex-direction: column;
+  }
+  
+  .input-group {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .photo-preview-container {
+    justify-content: center;
+  }
+}
+
+/* Focus States */
+.input:focus, .textarea:focus {
+  border-color: #ff5722;
+  box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2);
+}
+
+/* Disabled States */
+.input:disabled, .textarea:disabled, 
+.gender-button:disabled, 
+.submit-button:disabled, 
+.clear-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Form Header with Close Button */
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.3s;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.close-button:hover {
+  color: #ef4444;
+  background-color: #f3f4f6;
+}
+
+/* Form Navigation */
+.form-navigation {
+  display: flex;
+  margin: 1.5rem 0;
+}
+
+.back-button {
+  background: none;
+  border: 1px solid #d1d5db;
+  color: #4b5563;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.back-button:hover {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+/* Loading Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.spinner-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-left-color: #3b82f6;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success Message */
+.success-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #10b981;
+  color: white;
+  font-size: 3rem;
+  line-height: 80px;
+  margin: 0 auto 1.5rem;
+}
+
+.success-container h2 {
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.success-container p {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.success-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.primary-button, .secondary-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+}
+
+.primary-button:hover {
+  background-color: #2563eb;
+}
+
+.secondary-button {
+  background-color: white;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.secondary-button:hover {
+  background-color: #f3f4f6;
+}
+
+/* Error Banner */
+.error-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fee2e2;
+  border-left: 4px solid #ef4444;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.error-banner p {
+  color: #b91c1c;
+  margin: 0;
+}
+
+.error-close {
+  background: none;
+  border: none;
+  color: #b91c1c;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Make form more responsive */
+@media (max-width: 768px) {
+  .success-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .primary-button, .secondary-button {
+    width: 100%;
+  }
+  
+  .form-navigation {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,62 @@
+.action-button {
+    background-color: #ff6b2d; /* Orange background */
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .action-button:hover {
+    transform: translateY(-5px);
+  }
+  
+  .action-icon {
+    /* background-color: #6a11cb;  */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents the image from overflowing */
+}
+
+.action-icon img {
+    width: 60%;  /* Make the image responsive */
+    height: 60%; /* Ensure it scales properly */
+    object-fit: contain; /* Ensures the whole image fits */
+}
+
+  
+  .action-button h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: white;
+  }
+  
+  .action-button p {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  .action-btn {
+    background-color: #7d5fff; /* Purple button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    background-color: #5a0db8; /* Darker purple on hover */
+  }
+  

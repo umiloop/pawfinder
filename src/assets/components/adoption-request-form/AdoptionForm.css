@@ -1,0 +1,560 @@
+.adoption-form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 500px;
+    max-height: 90vh;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .adoption-form-container {
+    width: 100%;
+  }
+  
+  /* Form Header */
+  .form-header {
+    padding: 20px 24px 10px 24px;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    flex-shrink: 0;
+  }
+  
+  .form-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-title h2 {
+    font-size: 22px;
+    color: #333;
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  .paw-icon {
+    font-size: 22px;
+    color: #ff6b2d;
+  }
+  
+  .adoption-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+  }
+  
+  .adoption-form-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .adoption-form-close {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #777;
+    transition: color 0.2s;
+  }
+  
+  .adoption-form-close:hover {
+    color: #FF6B35;
+  }
+  
+  /* Progress Bar */
+  .progress-container {
+    padding: 20px 24px 0;
+    background-color: #fff;
+    flex-shrink: 0;
+  }
+  
+  .progress-bar {
+    height: 6px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(45deg, #ff6b2d, #ff8f59);
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .steps-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .step-dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #777;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .step-dot.active {
+    background-color: #ff6b2d;
+    color: white;
+    box-shadow: 0 3px 8px rgba(255, 107, 45, 0.3);
+  }
+  
+  .step-number {
+    font-weight: bold;
+  }
+  
+  /* Form Content */
+  .form-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 24px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-content::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .form-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .form-content::-webkit-scrollbar-thumb {
+    background-color: #ff6b2d;
+    border-radius: 10px;
+  }
+  
+  .form-step-header {
+    margin-bottom: 25px;
+    padding-top: 10px;
+  }
+  
+  .form-step-header h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 8px 0;
+  }
+  
+  .form-step-header p {
+    color: #666;
+    margin: 0;
+    font-size: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .input-icon {
+    color: #ff6b2d;
+    font-size: 16px;
+  }
+  
+  .input-field,
+  .textarea-field,
+  .select-field {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .input-field:focus,
+  .textarea-field:focus,
+  .select-field:focus {
+    border-color: #ff6b2d;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 107, 45, 0.3);
+  }
+  
+  .input-field.error,
+  .textarea-field.error,
+  .select-field.error {
+    border-color: #e74c3c;
+    background-color: #fff8f8;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+  
+  /* Radio Buttons */
+  .radio-group {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .radio-option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border: 2px solid #e9e9e9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .radio-option.selected {
+    border-color: #ff6b2d;
+    background-color: #fff8f2;
+  }
+  
+  .radio-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .radio-label {
+    padding-left: 5px;
+    font-weight: 500;
+    user-select: none;
+  }
+  
+  /* Form Actions */
+  .form-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    padding: 16px 24px;
+    border-top: 1px solid #eee;
+    background: #fff;
+    margin-top: auto;
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+  }
+  
+  .primary-button,
+  .secondary-button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    min-width: 120px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .primary-button {
+    border: none;
+    background: #ff6b2d;
+    color: #fff;
+    transition: background 0.2s;
+  }
+  
+  .primary-button:hover {
+    background: #ff8f59;
+  }
+  
+  .primary-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .secondary-button {
+    background: #eee;
+    color: #333;
+    border: 1px solid #ddd;
+  }
+  
+  .secondary-button:hover {
+    background: #e0e0e0;
+  }
+  
+  .submit-button {
+    min-width: 160px;
+  }
+  
+  .submit-error {
+    padding: 12px;
+    background-color: #fde8e8;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #e74c3c;
+    text-align: center;
+  }
+  
+  .adoption-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .adoption-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .adoption-form-group label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .adoption-form-group input,
+  .adoption-form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+  
+  .adoption-form-group input:focus,
+  .adoption-form-group textarea:focus {
+    border-color: #FF6B35;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2);
+  }
+  
+  .adoption-form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .adoption-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .adoption-form-cancel {
+    padding: 12px 20px;
+    background-color: #f5f5f5;
+    color: #555;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+  }
+  
+  .adoption-form-cancel:hover {
+    background-color: #e5e5e5;
+  }
+  
+  .adoption-form-submit {
+    padding: 12px 20px;
+    background-color: #FF6B35;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  
+  .adoption-form-submit:hover {
+    background-color: #ff7b1c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 107, 53, 0.3);
+  }
+  
+  .adoption-form-submit:active {
+    transform: translateY(0);
+  }
+  
+  /* Success Message */
+  .success-container {
+    text-align: center;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .success-icon {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .success-icon .paw-icon {
+    font-size: 32px;
+    animation: bounce 1s infinite alternate;
+  }
+  
+  .success-icon .paw-icon:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .success-icon .paw-icon:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  .success-container h2 {
+    color: #333;
+    margin: 0;
+  }
+  
+  .success-container p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Step Content */
+  .step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+  }
+  
+  /* Animation */
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .adoption-form-container {
+      width: 100%;
+    }
+    
+    .form-content {
+      min-height: 350px;
+      padding: 20px;
+    }
+    
+    .radio-group {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .form-actions {
+      padding: 15px 20px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .primary-button, 
+    .secondary-button {
+      min-width: 45%;
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .adoption-form-container {
+      max-width: 98vw;
+      padding: 0;
+    }
+    .form-header,
+    .form-content,
+    .form-actions {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    
+    .form-actions {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .primary-button,
+    .secondary-button {
+      min-width: 45%;
+    }
+    
+    .adoption-form-actions {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .adoption-form-cancel,
+    .adoption-form-submit {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .form-content {
+      padding: 15px;
+      min-height: 300px;
+    }
+    
+    .form-actions {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .primary-button,
+    .secondary-button {
+      width: 100%;
+      height: 40px;
+    }
+  }
+  
+  /* Add these styles */
+  .adoption-form-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    flex: 1;
+  }
+  
+  .adoption-form-paw-icon {
+    color: #4a90e2;
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }

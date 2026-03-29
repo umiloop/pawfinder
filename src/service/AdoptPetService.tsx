@@ -1,0 +1,80 @@
+import axios from "axios";
+import { User } from "lucide-react";
+
+const BASE_URL = "http://localhost:8080/api/pets";
+
+export const AdoptPetService = {
+  getRehomePets: async () => {
+    try {
+      const response = await axios.get(`${BASE_URL}/rehomepetlist`);
+      console.log("rehome pet list: ", response);
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching rehome pets:", error);
+      return [];
+    }
+  },
+
+  getApprovedRehomePets: async () => {
+    const response = await axios.get(`${BASE_URL}/approved`);
+    console.log("API Response for rehome pets:", response.data);
+    return response.data.map((pet: any) => ({
+      petId: pet.id,
+      petName: pet.petName,
+      petAge: `${pet.age} ${pet.ageUnit}`,
+      petLocation: pet.location,
+      petAvailabilityStatus: "Available", // Default or dynamic
+      petPicture: pet.photoUrls ? pet.photoUrls[0] : "/default-pet.jpg", // Keep first image as main picture
+      photoUrls: pet.photoUrls || ["/default-pet.jpg"], // Add all photo URLs
+      petBreed: pet.breed,
+      petGender: pet.gender,
+      contactPersonNumber: pet.contactNumber,
+      userId: pet.userId,
+      userName: pet.username || `User ${pet.userId}`, // Fallback to User + ID if username is null
+      description: pet.description,
+      isShelterPet: false
+    }));
+  },
+
+  getApprovedShelterPets: async () => {
+    const response = await axios.get(`${BASE_URL}/approvedshelterpets`);
+    console.log("API Response for shelter pets:", response.data);
+    return response.data.map((pet: any) => ({
+      petId: pet.id,
+      petName: pet.petName,
+      petAge: `${pet.age} ${pet.ageUnit}`,
+      petLocation: pet.shelterAddress,
+      petAvailabilityStatus: "Available", // Default or dynamic
+      petPicture: pet.photoUrls && pet.photoUrls.length > 0 ? pet.photoUrls[0] : "/default-pet.jpg", // Keep first image as main picture
+      photoUrls: pet.photoUrls || ["/default-pet.jpg"], // Add all photo URLs
+      petBreed: pet.breed,
+      petGender: pet.gender,
+      contactPersonNumber: pet.contactNumber,
+      userId: pet.userId,
+      userName: pet.username || `User ${pet.userId}`, // Fallback to User + ID if username is null
+      description: pet.description || "", // Ensure description is never undefined
+      isShelterPet: true
+    }));
+  },
+
+  getShelterPets: async () => {
+    try {
+      const response = await axios.get(`${BASE_URL}/shelterpetlist`);
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching shelter pets:", error);
+      return [];
+    }
+  },
+
+  submitAdoptionRequest: async (adoptionData: any) => {
+    try {
+      const response = await axios.post(`${BASE_URL}/adoptionrequest`, adoptionData);
+      console.log("Adoption request submitted successfully:", response.data);
+      return response.data;
+    } catch (error) {
+      console.error("Error submitting adoption request:", error);
+      throw error;
+    }
+  }
+};

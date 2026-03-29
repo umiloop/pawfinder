@@ -1,0 +1,474 @@
+/* Main Layout */
+.main-div {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  margin: 5% auto;
+  padding: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  /* background-color: gray; */
+}
+
+/* Left Section */
+.left-div {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 10px;
+  /* background-color: white; */
+}
+
+/* Small Image Thumbnails */
+.small-image-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
+  
+}
+
+.small-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.small-image.selected {
+  border: 2px solid #FF6934;
+}
+
+.small-image:hover {
+  border-color: #FF6934;
+}
+
+/* Main Image */
+.main-img-div {
+  display: flex;
+  justify-content: center;
+  /* background-color: gray; */
+}
+
+.main-image {
+  width: 90%;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+}
+
+/* Right Section */
+.right-div {
+  flex: 1;
+  padding: 20px;
+  /* background-color: green; */
+}
+
+.pet-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.pet-age {
+  font-size: 18px;
+  color: #555;
+}
+
+.pet-description {
+  margin: 15px 0;
+  color: #666;
+}
+
+.pet-info {
+  margin-bottom: 10px;
+}
+
+.pet-info label {
+  display: block;
+  font-weight: bold;
+}
+
+.pet-info input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.adopt-button {
+  width: 100%;
+  background-color: #FF6934;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.adopt-button:hover {
+  background-color: #ff5a20;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  width: 80%;
+  max-width: 1000px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Modal Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Button Styles */
+.adopt-button {
+  background-color: #FF6B35;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.adopt-button:hover {
+  background-color: #FF6B35;
+}
+
+.adopt-button.disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.adopt-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Pet Profile - Unique class names prefixed with 'pf-' to avoid conflicts */
+.pf-pet-profile-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.pf-pet-profile-content {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Left section - Images with consistent dimensions */
+.pf-pet-profile-media {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 50%;
+}
+
+.pf-main-img-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pf-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.pf-main-image:hover {
+  transform: scale(1.02);
+}
+
+.pf-thumbnail-container {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  overflow-x: auto;
+  background-color: #f9f9f9;
+}
+
+.pf-thumbnail-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.pf-thumbnail-wrapper:hover {
+  transform: translateY(-2px);
+}
+
+.pf-thumbnail-wrapper.pf-selected {
+  border-color: #FF6B35;
+  box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.3);
+}
+
+.pf-thumbnail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right section - Well-structured pet info */
+.pf-pet-profile-info {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+  background-color: #ffffff;
+}
+
+.pf-pet-header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pf-pet-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #333;
+}
+
+.pf-pet-age {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0.5rem 0 0 0;
+}
+
+.pf-pet-section {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pf-section-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.pf-pet-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.pf-pet-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.pf-pet-detail-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.pf-detail-label {
+  font-size: 0.85rem;
+  color: #777;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pf-detail-value {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.pf-pet-description-container {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.pf-pet-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  overflow-wrap: break-word;
+  margin: 0;
+}
+
+.pf-action-section {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pf-adopt-button {
+  background-color: #FF6B35;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pf-adopt-button:hover:not(:disabled) {
+  background-color: #ff7b1c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.pf-adopt-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.pf-adopt-button.pf-already-adopted {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.pf-adopt-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Modal styles - Updated to make form larger */
+.pf-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+}
+
+.pf-modal-container {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 95%;
+  width: 700px; /* Increased width for larger form */
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive design */
+@media screen and (max-width: 900px) {
+  .pf-pet-profile-content {
+    flex-direction: column;
+  }
+  
+  .pf-pet-profile-media {
+    max-width: 100%;
+  }
+  
+  .pf-main-img-container {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pf-pet-details-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pf-main-img-container {
+    height: 280px;
+  }
+  
+  .pf-pet-profile-info {
+    padding: 1.5rem;
+  }
+  
+  .pf-modal-container {
+    width: 95%;
+    padding: 1.5rem;
+  }
+}

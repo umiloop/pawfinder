@@ -1,0 +1,546 @@
+/* Volunteer.css */
+
+.volunteer-page {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Hero Section */
+.volunteer-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('src/assets/images/woman-playing-with-rescue-dogs-shelter.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.volunteer-hero-content {
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.volunteer-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.volunteer-hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Why Volunteer Section */
+.volunteer-why {
+  padding: 5rem 0;
+  background-color: #f9f9f9;
+}
+
+.volunteer-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f7ff;
+  border-radius: 50%;
+}
+
+.benefit-icon img {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.benefit-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.benefit-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Volunteer Opportunities */
+.volunteer-opportunities {
+  padding: 5rem 0;
+}
+
+.opportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.opportunity-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-5px);
+}
+
+.opportunity-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.opportunity-content {
+  padding: 1.5rem;
+}
+
+.opportunity-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #2c3e50;
+}
+
+.opportunity-content p {
+  margin-bottom: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.opportunity-details {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.opportunity-details li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Volunteer Stories */
+.volunteer-stories {
+  padding: 5rem 0;
+  background-color: #f9f9f9;
+}
+
+.stories-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.story-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  flex: 1;
+  min-width: 350px;
+  max-width: 550px;
+}
+
+.story-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.story-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-content h3 {
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+  color: #2c3e50;
+}
+
+.volunteer-role {
+  color: #ff6b2d;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.story-quote {
+  font-style: italic;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Volunteer Process */
+.volunteer-process {
+  padding: 5rem 0;
+}
+
+.process-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background-color: #ff6b2d;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.process-step h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #2c3e50;
+}
+
+.process-step p {
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Volunteer Application Form */
+.volunteer-application {
+  padding: 5rem 0;
+  background-color: #f9f9f9;
+}
+
+.volunteer-form {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: normal;
+  min-width: 200px;
+}
+
+.checkbox-label input {
+  margin-right: 0.5rem;
+  width: auto;
+}
+
+.required {
+  color: #ff6b2d;
+}
+
+.form-submit {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Success Message */
+.form-success {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.success-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  margin: 0 auto 1.5rem;
+}
+
+.form-success h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.form-success p {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* FAQ Section */
+.volunteer-faq {
+  padding: 5rem 0;
+}
+
+.faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #2c3e50;
+}
+
+.faq-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.volunteer-contact {
+  padding: 3rem 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.contact-content p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.contact-details {
+  display: inline-block;
+  text-align: left;
+}
+
+.contact-details p {
+  margin-bottom: 0.5rem;
+}
+
+.contact-details a {
+  color: #ff6b2d;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* Button Styles */
+.button {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  padding: 0.85rem 1.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.primary-button {
+  background-color: #ff6b2d;
+  color: white;
+}
+
+.primary-button:hover {
+  background-color: #e65a22;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .story-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .volunteer-hero h1 {
+    font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .volunteer-hero {
+    height: 400px;
+  }
+  
+  .volunteer-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .opportunity-card img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .volunteer-hero {
+    height: 350px;
+  }
+  
+  .volunteer-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .volunteer-form {
+    padding: 1.5rem;
+  }
+  
+  .checkbox-label {
+    min-width: 100%;
+  }
+}
