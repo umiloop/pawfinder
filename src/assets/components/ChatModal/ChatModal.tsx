@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { GeminiService } from '../../../services/GeminiService';
 import ReactMarkdown from 'react-markdown';
-import './ChatModal.css';
+import './Chatmodal.css';
 
 interface ChatModalProps {
   onClose: () => void;
