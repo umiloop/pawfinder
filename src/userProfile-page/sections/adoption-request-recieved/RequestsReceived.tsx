@@ -64,7 +64,7 @@ const RequestsReceived: React.FC = () => {
       }
       // Replace userId with the actual user ID from your auth context or props
       // const userId = 777; // This should come from your authentication system
-      const response = await fetch(`http://localhost:8080/api/adoption-requests/user/${userId}`);
+      const response = await fetch(`https://pawfinder-backend.onrender.com/api/adoption-requests/user/${userId}`);
       
       if (!response.ok) {
         throw new Error('Failed to fetch adoption requests');
@@ -116,7 +116,7 @@ const RequestsReceived: React.FC = () => {
 
   const handleApproveRequest = async (requestId: number) => {
   try {
-    const response = await fetch(`http://localhost:8080/api/adoption-requests/${requestId}/approve`, {
+    const response = await fetch(`https://pawfinder-backend.onrender.com/api/adoption-requests/${requestId}/approve`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -158,7 +158,7 @@ const RequestsReceived: React.FC = () => {
 
 const handleRejectRequest = async (requestId: number) => {
   try {
-    const response = await fetch(`http://localhost:8080/api/adoption-requests/${requestId}/reject`, {
+    const response = await fetch(`https://pawfinder-backend.onrender.com/api/adoption-requests/${requestId}/reject`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

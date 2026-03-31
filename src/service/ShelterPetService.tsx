@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/api/pets/shelterpet'; 
+const API_URL = 'https://pawfinder-backend.onrender.com/api/pets/shelterpet'; 
 export const submitShelterPetForm = async (formData: FormData) => {
   try {
     const response = await axios.post(API_URL, formData, {

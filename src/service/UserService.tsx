@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8080/api/users';
+const API_BASE_URL = 'https://pawfinder-backend.onrender.com/api/users';
 
 const UserService = {
   // Register a new user

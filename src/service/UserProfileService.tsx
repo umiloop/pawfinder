@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8080/api/users";
+const BASE_URL = "https://pawfinder-backend.onrender.com/api/users";
 
 // Fetch stray animal report requests by userId
 export const getStrayAnimalReportRequestsByUserId = async (userId: string) => {

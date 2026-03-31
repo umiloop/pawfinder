@@ -106,7 +106,7 @@ const HealthWellness: React.FC = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/admin/events');
+      const response = await fetch('https://pawfinder-backend.onrender.com/api/admin/events');
       if (!response.ok) {
         throw new Error('Failed to fetch events');
       }

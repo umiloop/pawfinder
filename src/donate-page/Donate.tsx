@@ -17,7 +17,7 @@ import loadingAnimation from '../assets/animations/loading.json';
 const stripePromise = loadStripe('pk_test_51REsQqQts9FgBehphqq1kgc0UwXXMPVMvBKH5KiAR6oj54kr6mZ5Wlk9DSgqH1Q34BrN201Grp7JIWKtJQXAiR4Q000NbTu6EB');
 
 // Spring Boot API URL 
-const API_URL = 'http://localhost:8080/api/donation'; // backend API endpoint
+const API_URL = 'https://pawfinder-backend.onrender.com/api/donation'; // backend API endpoint
 
 // Donation Types and Configuration
 const DONATION_AMOUNTS = [

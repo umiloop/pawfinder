@@ -1,7 +1,7 @@
 import axios from "axios";
 import { User } from "lucide-react";
 
-const BASE_URL = "http://localhost:8080/api/pets";
+const BASE_URL = "https://pawfinder-backend.onrender.com/api/pets";
 
 export const AdoptPetService = {
   getRehomePets: async () => {

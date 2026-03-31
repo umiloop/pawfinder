@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/pets/reportstray";
+const API_URL = "https://pawfinder-backend.onrender.com/api/pets/reportstray";
 
 export const reportStrayAnimal = async (data: any) => {
   try {
