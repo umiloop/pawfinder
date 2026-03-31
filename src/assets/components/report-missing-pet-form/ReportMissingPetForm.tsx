@@ -179,7 +179,6 @@ const ReportMissingPetForm: React.FC = () => {
   
   // State for validation
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
-  const [formSubmitted, setFormSubmitted] = useState(false);
   const [previewCard, setPreviewCard] = useState(false);
 
   // Add new state variables for submission and navigation
@@ -458,7 +457,6 @@ const ReportMissingPetForm: React.FC = () => {
     
     // Reset errors and form state
     setErrors({});
-    setFormSubmitted(false);
     setPreviewCard(false);
     setIsSubmitted(false);
   };

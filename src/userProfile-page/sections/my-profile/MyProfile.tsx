@@ -18,19 +18,6 @@ const fallbackUser = {
   createdAt: new Date().toISOString()
 };
 
-interface UserData {
-  id: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  phoneNumber: string;
-  accountType: string;
-  location: string;
-  bio: string;
-  profilePicture?: string;
-  createdAt: string;
-}
-
 interface MyProfileProps {
   user: any; // Changed to 'any' to handle possible undefined fields
 }
@@ -64,7 +51,7 @@ const MyProfile: React.FC<MyProfileProps> = ({ user }) => {
     confirmPassword: ''
   });
   
-  const [selectedImage, setSelectedImage] = useState<File | null>(null);
+  const [, setSelectedImage] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [errors, setErrors] = useState<{[key: string]: string}>({});
   

@@ -1,5 +1,4 @@
 import axios from "axios";
-import { User } from "lucide-react";
 
 const BASE_URL = "https://pawfinder-backend.onrender.com/api/pets";
 

@@ -36,7 +36,7 @@ const Clinics: React.FC = () => {
   const [filterService, setFilterService] = useState('');
   const [sortBy, setSortBy] = useState('rating');
   const [selectedClinic, setSelectedClinic] = useState<Clinic | null>(null);
-  const [isMapVisible, setIsMapVisible] = useState(true);
+  const [isMapVisible] = useState(true);
 
   useEffect(() => {
     fetchClinics();

@@ -4,7 +4,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { AdoptPetService } from "../service/AdoptPetService";
 import { 
   FaSearch, FaHeart, FaPaw, FaHome, FaMapMarkerAlt, 
-  FaFilter, FaChevronRight, FaRegSmile, FaShieldAlt, FaHandHoldingHeart 
+  FaFilter, FaRegSmile, FaShieldAlt, FaHandHoldingHeart 
 } from 'react-icons/fa';
 
 // Define the Pet type
@@ -22,7 +22,7 @@ interface Pet {
     userName: string;
     description: string;
     photoUrls?: string[];
-    isShelterPet: Boolean;
+    isShelterPet: boolean;
 }
 
 // Testimonial interface
@@ -50,17 +50,9 @@ const AdoptPage = () => {
     const [uniqueBreeds, setUniqueBreeds] = useState<string[]>([]);
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [showFilters, setShowFilters] = useState<boolean>(false);
-    const [activeTestimonial, setActiveTestimonial] = useState<number>(0);
+    const [, setActiveTestimonial] = useState<number>(0);
     const filterRef = useRef<HTMLDivElement>(null);
     const [activeFaq, setActiveFaq] = useState<number>(-1);
-    
-    // Adoption statistics
-    const adoptionStats = {
-        petsAdopted: 2347,
-        livesChanged: 4692,
-        sheltersSupported: 86,
-        happyFamilies: 2155
-    };
     
     // Testimonials
     const testimonials: Testimonial[] = [

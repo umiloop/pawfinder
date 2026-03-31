@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaTrash, FaSearch, FaSort, FaExclamationTriangle, FaTimes } from 'react-icons/fa';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
-import dogPicImage from '/src/assets/images/dogPic.png';
 import './MyListings.css';
 import { getPetRehomeRequestsByUserId, getShelterPetRequestsByUserId } from '../../../service/UserProfileService';
 
@@ -30,7 +28,6 @@ const MyListings: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortOrder, setSortOrder] = useState<'newest' | 'oldest'>('newest');
   const [isLoading, setIsLoading] = useState(true);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchListings = async () => {
@@ -75,35 +72,6 @@ const MyListings: React.FC = () => {
           datePosted: "2023-04-15",
           approvalStatus: item.reviewStatus?.toLowerCase() || "pending"
         }));
-
-        const x: Pet[] = [
-          {
-            id: 3,
-            petName: "Rocky",
-            petImage: dogPicImage,
-            petType: "Dog",
-            petBreed: "German Shepherd",
-            petAge: 1,
-            petGender: "Male",
-            listingType: "shelter",
-            petAvailabilityStatus: "pending",
-            datePosted: "2023-05-02",
-            approvalStatus: "pending"
-          },
-          {
-            id: 4,
-            petName: "Mittens",
-            petImage: dogPicImage,
-            petType: "Cat",
-            petBreed: "Tabby",
-            petAge: 4,
-            petGender: "Female",
-            listingType: "shelter",
-            petAvailabilityStatus: "available",
-            datePosted: "2023-04-25",
-            approvalStatus: "rejected"
-          }
-        ];
 
         setRehomePets(rehomeData);
         setShelterPets(shelterData);
@@ -184,11 +152,7 @@ const MyListings: React.FC = () => {
   };
 
   const handleMarkAsAdopted = (petId: number) => {
-    const updateStatus = (pets: Pet[]) =>
-      pets.map(pet => (pet.id === petId ? { ...pet, petAvailabilityStatus: 'adopted' } : pet));
-
-    // setRehomePets(prev => updateStatus(prev));
-    // setShelterPets(prev => updateStatus(prev));
+    void petId;
     toast.success("Pet has been marked as adopted!");
   };
 

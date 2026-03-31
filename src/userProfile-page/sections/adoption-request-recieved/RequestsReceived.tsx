@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaSearch, FaFilter, FaCheck, FaTimes, FaEnvelope, FaEye, FaPhone, FaUser, FaCalendarAlt } from 'react-icons/fa';
+import { FaSearch, FaFilter, FaCheck, FaTimes, FaEnvelope, FaEye, FaPhone, FaUser } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import './RequestsReceived.css';
 
@@ -206,10 +206,6 @@ const handleRejectRequest = async (requestId: number) => {
     }
   };
   
-  const handleEmailRequester = (email: string) => {
-    window.location.href = `mailto:${email}`;
-  };
-
   const getStatusBadgeClass = (status: string) => {
   switch (status.toLowerCase()) {
     case 'pending': return 'adoption-badge-pending';

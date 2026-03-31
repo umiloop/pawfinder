@@ -19,7 +19,7 @@ interface Pet {
   userName: string;
   description: string;
   photoUrls?: string[];
-  isShelterPet: Boolean;
+  isShelterPet: boolean;
 }
 
 interface PetCardProps {

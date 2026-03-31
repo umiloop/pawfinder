@@ -6,7 +6,7 @@ import UserService from '../service/UserService';
 import { 
   FaHome, FaHeart, FaCheck, FaArrowRight, FaUpload, FaBuilding, 
   FaPeopleCarry, FaChartLine, FaFileAlt, FaShieldAlt, FaComments, 
-  FaHandHoldingHeart, FaHeadset, FaPaw, FaHospital, FaUserCircle 
+  FaHandHoldingHeart, FaHeadset, FaPaw, FaHospital
 } from 'react-icons/fa';
 
 const ListPetPage: React.FC = () => {

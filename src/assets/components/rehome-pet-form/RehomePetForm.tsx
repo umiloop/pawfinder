@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./RehomePetForm.css";
 import { submitPetForm } from "../../../service/RehomePetService";
 import SuccessModal from '../success-rehome-alert/SuccessModal.tsx';
-import { useNavigate } from 'react-router-dom';
 
 const RehomePetForm = () => {
   // State for form fields
@@ -22,7 +21,6 @@ const RehomePetForm = () => {
   const [photoURLs, setPhotoURLs] = useState<string[]>([]);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [showSuccessModal, setShowSuccessModal] = useState(false);
-  const navigate = useNavigate();
 
   // Handle file upload
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {

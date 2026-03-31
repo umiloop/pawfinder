@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { useState, useEffect, useRef } from "react";
 import LoginPage from "../signup-login/LoginPage";
-import { FaUserCircle, FaPaw, FaBars, FaTimes, FaSearch } from "react-icons/fa";
+import { FaUserCircle, FaPaw, FaBars, FaTimes } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
@@ -64,11 +64,6 @@ const Navbar = () => {
 
   const handleUserProfileClick = () => {
     navigate('/profile');
-  };
-  
-  const handleLogout = () => {
-    setIsAuthenticated(false);
-    localStorage.removeItem('isAuthenticated');
   };
   
   const closeMobileMenu = () => {

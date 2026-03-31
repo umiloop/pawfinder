@@ -10,7 +10,7 @@ import './Donate.css';
 import axios from 'axios';
 import {motion} from "framer-motion"
 import { Player } from '@lottiefiles/react-lottie-player';
-import { FaPaw, FaCheckCircle, FaCreditCard, FaExclamationCircle } from 'react-icons/fa';
+import { FaPaw, FaCreditCard, FaExclamationCircle } from 'react-icons/fa';
 import loadingAnimation from '../assets/animations/loading.json';
 
 //  publishable key from Stripe dashboard
@@ -47,9 +47,8 @@ const TESTIMONIALS = [
 ];
 
 const DonationForm: React.FC<{
-  totalRaised: number;
   setTotalRaised: React.Dispatch<React.SetStateAction<number>>;
-}> = ({ totalRaised, setTotalRaised }) => {
+}> = ({ setTotalRaised }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
@@ -57,7 +56,6 @@ const DonationForm: React.FC<{
   const [donorName, setDonorName] = useState<string>('');
   const [donorEmail, setDonorEmail] = useState<string>('');
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
-  const [paymentStatus, setPaymentStatus] = useState<string | null>(null);
   const [paymentError, setPaymentError] = useState<string | null>(null);
   const [showConfirmation, setShowConfirmation] = useState<boolean>(false);
   const [confirmationDetails, setConfirmationDetails] = useState<{
@@ -73,7 +71,6 @@ const DonationForm: React.FC<{
     setDonorName('');
     setDonorEmail('');
     setIsProcessing(false);
-    setPaymentStatus(null);
     setPaymentError(null);
     setShowConfirmation(false);
     setConfirmationDetails(null);
@@ -136,7 +133,6 @@ const DonationForm: React.FC<{
       if (error) {
         setPaymentError(error.message || 'An error occurred during payment processing');
       } else if (paymentIntent && paymentIntent.status === 'succeeded') {
-        setPaymentStatus('success');
         setConfirmationDetails({
           amount: selectedAmount,
           name: donorName,
@@ -433,7 +429,7 @@ const Donate: React.FC = () => {
 
         <section id="donation-form" className="donation-form-section">
           <h2>Make a Donation</h2>
-          <DonationForm totalRaised={totalRaised} setTotalRaised={setTotalRaised} />
+          <DonationForm setTotalRaised={setTotalRaised} />
         </section>
       </div>
     </Elements>

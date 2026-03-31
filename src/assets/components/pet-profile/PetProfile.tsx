@@ -17,6 +17,7 @@ interface Pet {
   userName: string;
   description: string;
   photoUrls?: string[];
+  isShelterPet?: boolean;
 }
 
 interface PetProfileProps {
@@ -135,6 +136,12 @@ const PetProfile: React.FC<PetProfileProps> = ({ pet }) => {
             <AdoptionForm
               petId={pet.petId}
               petName={pet.petName}
+              petAge={parseInt(pet.petAge) || 0}
+              petBreed={pet.petBreed}
+              petGender={pet.petGender}
+              petImageUrl={pet.petPicture || DogPic}
+              petOwnerId={pet.userId}
+              isShelterPet={pet.isShelterPet ?? false}
               onClose={closeAdoptionForm}
             />
           </div>

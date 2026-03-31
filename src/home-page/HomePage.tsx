@@ -8,7 +8,6 @@ import "./HomePage.css";
 import HeroImage from "../assets/images/herohome.jpg";
 import AdoptPetPic from "../assets/adoptPet.png";
 import RescuePetPic from "../assets/images/rescuePet.png";
-import ReportPetPic from "../assets/images/reportPet.png";
 import ListPetPic from "../assets/images/listPet.png";
 import CarePic from "../assets/images/care.png";
 import TrustPic from "../assets/images/trust.png";
@@ -29,6 +28,7 @@ interface Pet {
   userId: number;
   userName: string;
   description: string;
+  isShelterPet: boolean;
 }
 
 const HomePage = () => {
@@ -78,7 +78,8 @@ const HomePage = () => {
         setFeaturedPets(shuffledPets.slice(0, 6).map(pet => ({
           ...pet,
           petAvailabilityStatus: "Available",
-          petPicture: pet.petPicture || "/default-pet.jpg"
+          petPicture: pet.petPicture || "/default-pet.jpg",
+          isShelterPet: pet.isShelterPet ?? false
         })));
       } catch (error) {
         console.error('Error fetching featured pets:', error);

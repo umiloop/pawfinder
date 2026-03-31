@@ -25,7 +25,7 @@ const UserProfilePage: React.FC<UserProfilePageProps> = ({ section }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [, setIsAuthenticated] = useState(false);
   const navigate = useNavigate();
   const [user, setUser] = useState<ReturnType<typeof UserService.getCurrentUser> | null>(null);
 
