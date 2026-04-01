@@ -1,6 +1,11 @@
 import React from 'react';
 import './CheckupsInfo.css';
 
+const CHECKUPS_CALENDAR_ICON = new URL("../../images/chekup-info/calendar_17579917.png", import.meta.url).href;
+const CHECKUPS_HEART_ICON = new URL("../../images/chekup-info/heart_17325556.png", import.meta.url).href;
+const CHECKUPS_PET_INSURANCE_ICON = new URL("../../images/chekup-info/petinsurance.png", import.meta.url).href;
+const CHECKUPS_GROWTH_ICON = new URL("../../images/chekup-info/growth.png", import.meta.url).href;
+
 const CheckupsInfo: React.FC = () => {
   return (
     <div className="checkups-container">
@@ -23,7 +28,7 @@ const CheckupsInfo: React.FC = () => {
           <div className="checkups-info-grid">
             <div className="checkups-card">
               <div className="checkups-icon">
-                <img src="src/assets/images/chekup-info/calendar_17579917.png" alt="Early Detection" />
+                <img src={CHECKUPS_CALENDAR_ICON} alt="Early Detection" />
               </div>
               <h3>Early Detection</h3>
               <p>Regular checkups allow veterinarians to catch health issues before they become serious problems. Many conditions are treatable when caught early.</p>
@@ -31,7 +36,7 @@ const CheckupsInfo: React.FC = () => {
 
             <div className="checkups-card">
               <div className="checkups-icon">
-                <img src="src/assets/images/chekup-info/heart_17325556.png" alt="Preventive Care" />
+                <img src={CHECKUPS_HEART_ICON} alt="Preventive Care" />
               </div>
               <h3>Preventive Care</h3>
               <p>Checkups include preventive measures like vaccinations, parasite control, and dental assessments that keep your pet healthy and happy.</p>
@@ -39,7 +44,7 @@ const CheckupsInfo: React.FC = () => {
 
             <div className="checkups-card">
               <div className="checkups-icon">
-                <img src="src/assets/images/chekup-info/petinsurance.png" alt="Cost Savings" />
+                <img src={CHECKUPS_PET_INSURANCE_ICON} alt="Cost Savings" />
               </div>
               <h3>Long-term Savings</h3>
               <p>Prevention is less expensive than treating advanced disease. Regular checkups can save you money in the long run.</p>
@@ -47,7 +52,7 @@ const CheckupsInfo: React.FC = () => {
 
             <div className="checkups-card">
               <div className="checkups-icon">
-                <img src="src/assets/images/chekup-info/growth.png" alt="Track Growth" />
+                <img src={CHECKUPS_GROWTH_ICON} alt="Track Growth" />
               </div>
               <h3>Track Development</h3>
               <p>Regular visits help monitor your pet's growth, weight changes, and age-related developments.</p>

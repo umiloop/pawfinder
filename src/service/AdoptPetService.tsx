@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const BASE_URL = "https://pawfinder-backend.onrender.com/api/pets";
+const DEFAULT_PET_IMAGE = "/default-pet.svg";
 
 export const AdoptPetService = {
   getRehomePets: async () => {
@@ -23,8 +24,8 @@ export const AdoptPetService = {
       petAge: `${pet.age} ${pet.ageUnit}`,
       petLocation: pet.location,
       petAvailabilityStatus: "Available", // Default or dynamic
-      petPicture: pet.photoUrls ? pet.photoUrls[0] : "/default-pet.jpg", // Keep first image as main picture
-      photoUrls: pet.photoUrls || ["/default-pet.jpg"], // Add all photo URLs
+      petPicture: pet.photoUrls ? pet.photoUrls[0] : DEFAULT_PET_IMAGE, // Keep first image as main picture
+      photoUrls: pet.photoUrls || [DEFAULT_PET_IMAGE], // Add all photo URLs
       petBreed: pet.breed,
       petGender: pet.gender,
       contactPersonNumber: pet.contactNumber,
@@ -44,8 +45,8 @@ export const AdoptPetService = {
       petAge: `${pet.age} ${pet.ageUnit}`,
       petLocation: pet.shelterAddress,
       petAvailabilityStatus: "Available", // Default or dynamic
-      petPicture: pet.photoUrls && pet.photoUrls.length > 0 ? pet.photoUrls[0] : "/default-pet.jpg", // Keep first image as main picture
-      photoUrls: pet.photoUrls || ["/default-pet.jpg"], // Add all photo URLs
+      petPicture: pet.photoUrls && pet.photoUrls.length > 0 ? pet.photoUrls[0] : DEFAULT_PET_IMAGE, // Keep first image as main picture
+      photoUrls: pet.photoUrls || [DEFAULT_PET_IMAGE], // Add all photo URLs
       petBreed: pet.breed,
       petGender: pet.gender,
       contactPersonNumber: pet.contactNumber,

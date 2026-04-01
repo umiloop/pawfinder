@@ -56,7 +56,7 @@ const RescueSubmitted: React.FC = () => {
           animalType: item.animalType,
           location: item.locationText,
           description: item.description || 'No description provided.',
-          image: item.photoUrls?.[0] || '/default-pet.jpg',
+          image: item.photoUrls?.[0] || '/default-pet.svg',
           reportDate: item.createdAt,
           status: statusMap[item.reviewStatus] || 'reviewing', // Default to 'reviewing' if unknown
           emergencyLevel: "high",

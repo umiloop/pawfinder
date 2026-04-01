@@ -22,7 +22,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/src/assets/images/pet-pattern.png');
+  background-image: url('/pet-pattern.svg');
   background-size: 200px;
   opacity: 0.1;
   z-index: 0;

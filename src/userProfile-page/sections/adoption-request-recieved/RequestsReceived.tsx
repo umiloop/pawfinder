@@ -344,7 +344,7 @@ useEffect(() => {
                   alt={petRequests[0].petName} 
                   className="adoption-pet-thumbnail"
                   onError={(e) => {
-                    e.currentTarget.src = "/assets/images/default-pet.jpg"; // Fallback image
+                    e.currentTarget.src = "/default-pet.svg"; // Fallback image
                   }} 
                 />
                 <div className="adoption-pet-info">

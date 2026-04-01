@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero-section-donate {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('src/assets/images/closeup-shot-snouts-cute-dog-cat-sitting-cheek-cheek.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/closeup-shot-snouts-cute-dog-cat-sitting-cheek-cheek.jpg');
     background-size: cover;
     background-position: center;
     height: 70vh;
@@ -113,15 +113,15 @@
   }
   
   .impact-icon.food {
-    background-image: url('src/assets/images/cat.png');
+    background-image: url('../assets/images/cat.png');
   }
   
   .impact-icon.medical {
-    background-image: url('src/assets/images/medical-record.png');
+    background-image: url('../assets/images/medical-record.png');
   }
   
   .impact-icon.shelter {
-    background-image: url('src/assets/images/dog-house.png');
+    background-image: url('../assets/images/dog-house.png');
   }
   
   /* Donation Progress */

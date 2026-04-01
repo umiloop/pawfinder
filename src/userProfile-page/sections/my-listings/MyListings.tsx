@@ -46,7 +46,7 @@ const MyListings: React.FC = () => {
         const rehomeData: Pet[] = rehomeResponse.map((item: any) => ({
             id: item.id,
             petName: item.petName,
-            petImage: item.photoUrls?.[0] || "/default-pet.jpg",
+            petImage: item.photoUrls?.[0] || "/default-pet.svg",
             petType: item.petType,
             petBreed: item.breed,
             petAge: item.age,
@@ -62,7 +62,7 @@ const MyListings: React.FC = () => {
         const shelterData: Pet[] = shelterResponse.map((item: any) => ({
           id: item.id,
           petName: item.petName,
-          petImage: item.photoUrls?.[0] || "/default-pet.jpg",
+          petImage: item.photoUrls?.[0] || "/default-pet.svg",
           petType: item.petType,
           petBreed: item.breed,
           petAge: item.age,
@@ -288,7 +288,7 @@ const MyListings: React.FC = () => {
                   alt={pet.petName} 
                   className="pet-image" 
                   onError={(e) => {
-                    e.currentTarget.src = '/assets/images/default-pet.jpg';
+                    e.currentTarget.src = '/default-pet.svg';
                   }}
                 />
                 {/* Approval status badge in top left */}

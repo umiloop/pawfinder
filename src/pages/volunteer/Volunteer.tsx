@@ -1,6 +1,19 @@
 import React, { useState } from 'react';
 import './Volunteer.css';
 
+const VOLUNTEER_PAW_ICON = new URL("../../assets/images/volunteer-img/paw.png", import.meta.url).href;
+const VOLUNTEER_HEART_ICON = new URL("../../assets/images/volunteer-img/pet-care.png", import.meta.url).href;
+const VOLUNTEER_SKILL_ICON = new URL("../../assets/images/volunteer-img/skill.png", import.meta.url).href;
+const VOLUNTEER_WELFARE_ICON = new URL("../../assets/images/volunteer-img/welfare.png", import.meta.url).href;
+const VOLUNTEER_ANIMAL_CARE_IMAGE = new URL("../../assets/images/volunteer-img/animalcare.jpg", import.meta.url).href;
+const VOLUNTEER_FOSTER_CARE_IMAGE = new URL("../../assets/images/volunteer-img/fostercare.jpg", import.meta.url).href;
+const VOLUNTEER_EVENT_SUPPORT_IMAGE = new URL("../../assets/images/volunteer-img/eventsup.jpg", import.meta.url).href;
+const VOLUNTEER_PHOTOGRAPHER_IMAGE = new URL("../../assets/images/volunteer-img/petphotographer.jpg", import.meta.url).href;
+const VOLUNTEER_ADMIN_IMAGE = new URL("../../assets/images/volunteer-img/Adminsup.jpg", import.meta.url).href;
+const VOLUNTEER_TRANSPORT_IMAGE = new URL("../../assets/images/volunteer-img/transport.jpg", import.meta.url).href;
+const VOLUNTEER_AUTHOR_ONE_IMAGE = new URL("../../assets/images/volunteer-img/womenvol.jpg", import.meta.url).href;
+const VOLUNTEER_AUTHOR_TWO_IMAGE = new URL("../../assets/images/volunteer-img/handsome-young-guy-with-glasses-posing.jpg", import.meta.url).href;
+
 const Volunteer: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -77,7 +90,7 @@ const Volunteer: React.FC = () => {
           <div className="volunteer-benefits">
             <div className="benefit-card">
               <div className="benefit-icon">
-                <img src="src/assets/images/volunteer-img/paw.png" alt="Paw icon" />
+                <img src={VOLUNTEER_PAW_ICON} alt="Paw icon" />
               </div>
               <h3>Make a Direct Impact</h3>
               <p>Help animals find loving homes and improve their quality of life while they wait.</p>
@@ -85,7 +98,7 @@ const Volunteer: React.FC = () => {
             
             <div className="benefit-card">
               <div className="benefit-icon">
-                <img src="src/assets/images/volunteer-img/pet-care.png" alt="Heart icon" />
+                <img src={VOLUNTEER_HEART_ICON} alt="Heart icon" />
               </div>
               <h3>Build Connections</h3>
               <p>Meet like-minded animal lovers and become part of our compassionate community.</p>
@@ -93,7 +106,7 @@ const Volunteer: React.FC = () => {
             
             <div className="benefit-card">
               <div className="benefit-icon">
-                <img src="src/assets/images/volunteer-img/skill.png" alt="Skill icon" />
+                <img src={VOLUNTEER_SKILL_ICON} alt="Skill icon" />
               </div>
               <h3>Gain New Skills</h3>
               <p>Develop valuable experience while contributing to a meaningful cause.</p>
@@ -101,7 +114,7 @@ const Volunteer: React.FC = () => {
             
             <div className="benefit-card">
               <div className="benefit-icon">
-                <img src="src/assets/images/volunteer-img/welfare.png" alt="Wellbeing icon" />
+                <img src={VOLUNTEER_WELFARE_ICON} alt="Wellbeing icon" />
               </div>
               <h3>Improve Wellbeing</h3>
               <p>Volunteering with animals has been shown to reduce stress and increase happiness.</p>
@@ -120,7 +133,7 @@ const Volunteer: React.FC = () => {
           
           <div className="opportunities-grid">
             <div className="opportunity-card">
-              <img src="src/assets/images/volunteer-img/animalcare.jpg" alt="Animal care volunteer" />
+              <img src={VOLUNTEER_ANIMAL_CARE_IMAGE} alt="Animal care volunteer" />
               <div className="opportunity-content">
                 <h3>Animal Care</h3>
                 <p>Help with daily care routines including feeding, walking, grooming, and socializing with animals.</p>
@@ -133,7 +146,7 @@ const Volunteer: React.FC = () => {
             </div>
             
             <div className="opportunity-card">
-              <img src="src/assets/images/volunteer-img/fostercare.jpg" alt="Foster volunteer" />
+              <img src={VOLUNTEER_FOSTER_CARE_IMAGE} alt="Foster volunteer" />
               <div className="opportunity-content">
                 <h3>Foster Program</h3>
                 <p>Provide temporary homes for animals awaiting adoption, including those needing special care.</p>
@@ -146,7 +159,7 @@ const Volunteer: React.FC = () => {
             </div>
             
             <div className="opportunity-card">
-              <img src="src/assets/images/volunteer-img/eventsup.jpg" alt="Event volunteer" />
+              <img src={VOLUNTEER_EVENT_SUPPORT_IMAGE} alt="Event volunteer" />
               <div className="opportunity-content">
                 <h3>Event Support</h3>
                 <p>Help with adoption events, fundraisers, and community outreach programs.</p>
@@ -159,7 +172,7 @@ const Volunteer: React.FC = () => {
             </div>
             
             <div className="opportunity-card">
-              <img src="src/assets/images/volunteer-img/petphotographer.jpg" alt="Photographer volunteer" />
+              <img src={VOLUNTEER_PHOTOGRAPHER_IMAGE} alt="Photographer volunteer" />
               <div className="opportunity-content">
                 <h3>Photography & Social Media</h3>
                 <p>Take photos of adoptable pets or help manage our social media presence.</p>
@@ -172,7 +185,7 @@ const Volunteer: React.FC = () => {
             </div>
             
             <div className="opportunity-card">
-              <img src="src/assets/images/volunteer-img/Adminsup.jpg" alt="Administrative volunteer" />
+              <img src={VOLUNTEER_ADMIN_IMAGE} alt="Administrative volunteer" />
               <div className="opportunity-content">
                 <h3>Administrative Support</h3>
                 <p>Assist with office tasks, answering calls, processing applications, and data entry.</p>
@@ -185,7 +198,7 @@ const Volunteer: React.FC = () => {
             </div>
             
             <div className="opportunity-card">
-              <img src="src/assets/images/volunteer-img/transport.jpg" alt="Transport volunteer" />
+              <img src={VOLUNTEER_TRANSPORT_IMAGE} alt="Transport volunteer" />
               <div className="opportunity-content">
                 <h3>Transport Team</h3>
                 <p>Help transport animals to vet appointments, adoption events, or foster homes.</p>
@@ -211,7 +224,7 @@ const Volunteer: React.FC = () => {
           <div className="stories-carousel">
             <div className="story-card">
               <div className="story-photo">
-                <img src="src/assets/images/volunteer-img/womenvol.jpg" alt="Volunteer Sarah" />
+                <img src={VOLUNTEER_AUTHOR_ONE_IMAGE} alt="Volunteer Sarah" />
               </div>
               <div className="story-content">
                 <h3>Sarah's Story</h3>
@@ -226,7 +239,7 @@ const Volunteer: React.FC = () => {
             
             <div className="story-card">
               <div className="story-photo">
-                <img src="src/assets/images/volunteer-img/handsome-young-guy-with-glasses-posing.jpg" alt="Volunteer Michael" />
+                <img src={VOLUNTEER_AUTHOR_TWO_IMAGE} alt="Volunteer Michael" />
               </div>
               <div className="story-content">
                 <h3>Michael's Story</h3>

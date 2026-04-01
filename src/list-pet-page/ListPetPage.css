@@ -45,7 +45,7 @@
 .hero-image-list {
   width: 500px;
   height: 400px;
-  background-image: url('src/assets/images/madeline-bowen-O3L9n7_QI70-unsplash.jpg');
+  background-image: url('../assets/images/madeline-bowen-O3L9n7_QI70-unsplash.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 16px;
@@ -486,15 +486,15 @@
 }
 
 .story-1 {
-  background-image: url('src/assets/images/Sucess-Story/SuccessStory_2.jpg');
+  background-image: url('../assets/images/Sucess-Story/SuccessStory_2.jpg');
 }
 
 .story-2 {
-  background-image: url('src/assets/images/Sucess-Story/SucessStory_3.jpg');
+  background-image: url('../assets/images/Sucess-Story/SucessStory_3.jpg');
 }
 
 .story-3 {
-  background-image: url('src/assets/images/Sucess-Story/SucessStory_1.jpg');
+  background-image: url('../assets/images/Sucess-Story/SucessStory_1.jpg');
 }
 
 /* Fallback if images aren't available */
@@ -572,15 +572,15 @@
 }
 
 .story-1 .author-avatar {
-  background-image: url('/assets/images/avatar-1.jpg');
+  background-image: url('/avatar-1.svg');
 }
 
 .story-2 .author-avatar {
-  background-image: url('/assets/images/avatar-2.jpg');
+  background-image: url('/avatar-2.svg');
 }
 
 .story-3 .author-avatar {
-  background-image: url('/assets/images/avatar-3.jpg');
+  background-image: url('/avatar-3.svg');
 }
 
 .author-name {

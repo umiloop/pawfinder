@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Avatar 3</title>
+  <desc id="desc">Simple avatar placeholder.</desc>
+  <rect width="120" height="120" rx="60" fill="#d8ead9"/>
+  <circle cx="60" cy="46" r="22" fill="#fbfff9"/>
+  <path d="M28 102c10-23 26-34 32-34h0c6 0 22 11 32 34" fill="#fbfff9"/>
+  <circle cx="52" cy="44" r="4" fill="#355d3b"/>
+  <circle cx="68" cy="44" r="4" fill="#355d3b"/>
+  <path d="M50 57c6 6 14 6 20 0" stroke="#355d3b" stroke-width="4" stroke-linecap="round" fill="none"/>
+</svg>

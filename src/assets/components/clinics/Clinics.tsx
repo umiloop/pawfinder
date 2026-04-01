@@ -8,6 +8,12 @@ import { MdDirections } from 'react-icons/md';
 import { IoWarning } from 'react-icons/io5';
 import { HiPhone } from 'react-icons/hi';
 
+const CLINIC_PETVET_IMAGE = new URL("../../../assets/images/welnesssrc/images.jpg", import.meta.url).href;
+const CLINIC_UNIVET_IMAGE = new URL("../../../assets/images/welnesssrc/univet.jpg", import.meta.url).href;
+const CLINIC_GETAMBE_IMAGE = new URL("../../../assets/images/welnesssrc/getambe.jpg", import.meta.url).href;
+const CLINIC_PETSVCARE_IMAGE = new URL("../../../assets/images/welnesssrc/new-pesvcare-hospital-narahenpita.jpg", import.meta.url).href;
+const CLINIC_DR_GALLE_IMAGE = new URL("../../../assets/images/welnesssrc/drgalle.jpg", import.meta.url).href;
+
 interface Clinic {
   id: number;
   name: string;
@@ -56,7 +62,7 @@ const Clinics: React.FC = () => {
           website: "https://www.petvet.com",
           hours: "Mon-Fri: 8am-8pm, Sat-Sun: 9am-5pm",
           services: ["General Checkups", "Vaccinations", "Surgery", "Dental Care", "Pet Grooming"],
-          imageUrl: "src/assets/images/welnesssrc/images.jpg",
+          imageUrl: CLINIC_PETVET_IMAGE,
           rating: 4.1,
           reviews: 643,
           coordinates: { lat: 6.9014, lng: 79.8617 },
@@ -72,7 +78,7 @@ const Clinics: React.FC = () => {
           website: "https://www.univet.com",
           hours: "Mon-Sat: 7am-7pm, Sun: 10am-4pm",
           services: ["General Checkups", "Dental Care", "Pet Nutrition", "Emergency Care", "Pet Boarding"],
-          imageUrl: "src/assets/images/welnesssrc/univet.jpg",
+          imageUrl: CLINIC_UNIVET_IMAGE,
           rating: 4.3,
           reviews: 424,
           coordinates: { lat: 6.7139, lng: 79.9080 },
@@ -88,7 +94,7 @@ const Clinics: React.FC = () => {
           website: "https://www.vethospital.com",
           hours: "Mon-Fri: 9am-6pm, Sat: 10am-4pm",
           services: ["Emergency Care", "Surgery", "Vaccinations", "Pet Rehabilitation", "Specialist Consultations"],
-          imageUrl: "src/assets/images/welnesssrc/getambe.jpg",
+          imageUrl: CLINIC_GETAMBE_IMAGE,
           rating: 3.7,
           reviews: 40,
           coordinates: { lat: 7.2671, lng: 80.5974 },
@@ -104,7 +110,7 @@ const Clinics: React.FC = () => {
           website: "https://petsvcare.lk/",
           hours: "Mon-Fri: 8am-7pm, Sat: 9am-3pm",
           services: ["Emergency Care", "Orthopedic Surgery", "Cardiology", "Internal Medicine", "Radiology"],
-          imageUrl: "src/assets/images/welnesssrc/new-pesvcare-hospital-narahenpita.jpg",
+          imageUrl: CLINIC_PETSVCARE_IMAGE,
           rating: 4.2,
           reviews: 882,
           coordinates: { lat: 30.2672, lng: -97.7431 },
@@ -120,7 +126,7 @@ const Clinics: React.FC = () => {
           website: "https://www.healinghandsvet.com",
           hours: "Mon-Sat: 8am-8pm, Sun: Emergency Only",
           services: ["Preventive Care", "Dental Care", "Surgery", "Vaccinations", "Exotic Pet Care"],
-          imageUrl: "src/assets/images/welnesssrc/drgalle.jpg",
+          imageUrl: CLINIC_DR_GALLE_IMAGE,
           rating: 4.4,
           reviews: 214,
           coordinates: { lat: 47.6062, lng: -122.3321 },

@@ -57,7 +57,7 @@ const MissingPetReports: React.FC = () => {
           petName: item.petName,
           petType: item.petType,
           petBreed: item.breed,
-          petImage: item.photoURLs?.[0] || "/default-pet.jpg",
+          petImage: item.photoURLs?.[0] || "/default-pet.svg",
           lastSeenLocation: item.location_address || "Unknown",
           lastSeenDate: "N/A",
           contactName: item.ownerName,

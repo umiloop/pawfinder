@@ -11,7 +11,7 @@
 .hero-section-health {
   position: relative;
   height: 550px;
-  background-image: url('src/assets/images/welnesssrc/healthhero.jpg');
+  background-image: url('../assets/images/welnesssrc/healthhero.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -827,7 +827,7 @@
 
 /* Call to Action */
 .cta-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('src/assets/images/welnesssrc/10674932.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/welnesssrc/10674932.jpg');
   background-size: cover;
   background-position: center;
   color: white;

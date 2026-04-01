@@ -8,6 +8,23 @@ import {
   FaDownload 
 } from 'react-icons/fa';
 
+const HEALTH_EDU_DOG_IMAGE = new URL("../assets/images/edudog.jpg", import.meta.url).href;
+const HEALTH_RESPONSIBLE_DOG_IMAGE = new URL("../assets/images/welnesssrc/health tab/dogrespo.jpg", import.meta.url).href;
+const HEALTH_PUPPY_IMAGE = new URL("../assets/images/welnesssrc/health tab/puupyhealth.jpg", import.meta.url).href;
+const HEALTH_TRAINING_IMAGE = new URL("../assets/images/welnesssrc/health tab/training.jpg", import.meta.url).href;
+const HEALTH_HOSPITAL_ICON = new URL("../assets/images/hospital.png", import.meta.url).href;
+const HEALTH_CHECKUP_ICON = new URL("../assets/images/checkup.png", import.meta.url).href;
+const HEALTH_INJECTION_ICON = new URL("../assets/images/injection.png", import.meta.url).href;
+const HEALTH_PET_FOOD_ICON = new URL("../assets/images/pet-food.png", import.meta.url).href;
+const HEALTH_PET_INSURANCE_ICON = new URL("../assets/images/pet-insurance.png", import.meta.url).href;
+const HEALTH_PAW_FEET_ICON = new URL("../assets/images/pawfeet.png", import.meta.url).href;
+const HEALTH_DOC_1 = new URL("../assets/images/Doc1.jpg", import.meta.url).href;
+const HEALTH_DOC_2 = new URL("../assets/images/Doc2.jpg", import.meta.url).href;
+const HEALTH_MEDICAL_ICON = new URL("../assets/images/welnesssrc/medical.png", import.meta.url).href;
+const HEALTH_VET_ICON = new URL("../assets/images/welnesssrc/vet.png", import.meta.url).href;
+const HEALTH_PETHOUSE_ICON = new URL("../assets/images/welnesssrc/pet-house.png", import.meta.url).href;
+const HEALTH_HANDSHAKE_ICON = new URL("../assets/images/welnesssrc/handshake.png", import.meta.url).href;
+
 interface Event {
   id: number;
   month: string;
@@ -39,7 +56,7 @@ const HealthWellness: React.FC = () => {
         text: "Adoption gives animals a second chance at finding their forever home. It's one of the most rewarding experiences for both the pet and their new family.",
         author: "Dr. Maria Sanchez, Veterinarian and Animal Welfare Advocate"
       },
-      image: "src/assets/images/edudog.jpg",
+      image: HEALTH_EDU_DOG_IMAGE,
       link: "/adoption-guide"
     },
     {
@@ -55,7 +72,7 @@ const HealthWellness: React.FC = () => {
         text: "Responsible ownership is about commitment—providing care, love, and attention for the entire life of your pet, which could be 10-15 years or more.",
         author: "Dr. James Wilson, Veterinary Surgeon"
       },
-      image: "src/assets/images/welnesssrc/health tab/dogrespo.jpg",
+      image: HEALTH_RESPONSIBLE_DOG_IMAGE,
       link: "/responsible-ownership"
     },
     {
@@ -71,7 +88,7 @@ const HealthWellness: React.FC = () => {
         text: "Prevention is always better than treatment. A proactive approach to your pet's health can add years to their life and life to their years.",
         author: "Dr. Emily Chen, Veterinary Medicine Specialist"
       },
-      image: "src/assets/images/welnesssrc/health tab/puupyhealth.jpg",
+      image: HEALTH_PUPPY_IMAGE,
       link: "/pet-health-guide"
     },
     {
@@ -87,7 +104,7 @@ const HealthWellness: React.FC = () => {
         text: "Training isn't about control—it's about communication. When we understand each other, both pet and human can live harmoniously.",
         author: "Lisa Chen, Certified Animal Behaviorist"
       },
-      image: "src/assets/images/welnesssrc/health tab/training.jpg",
+      image: HEALTH_TRAINING_IMAGE,
       link: "/training-guide"
     }
   ];
@@ -165,7 +182,7 @@ const HealthWellness: React.FC = () => {
           {/* Veterinary Clinics Card */}
           <div className="service-card">
             <div className="card-icon">
-              <img src="src/assets/images/hospital.png" alt="Clinic Icon" />
+              <img src={HEALTH_HOSPITAL_ICON} alt="Clinic Icon" />
             </div>
             <h3>Veterinary Clinics</h3>
             <p>Find trusted partner clinics offering specialized care near you</p>
@@ -175,7 +192,7 @@ const HealthWellness: React.FC = () => {
           {/* Health Checkups Card */}
           <div className="service-card">
             <div className="card-icon">
-              <img src="src/assets/images/checkup.png" alt="Checkup Icon" />
+              <img src={HEALTH_CHECKUP_ICON} alt="Checkup Icon" />
             </div>
             <h3>Health Checkups</h3>
             <p>Learn about essential preventive care and prepare for vet visits</p>
@@ -185,7 +202,7 @@ const HealthWellness: React.FC = () => {
           {/* Vaccination Card */}
           <div className="service-card">
             <div className="card-icon">
-              <img src="src/assets/images/injection.png" alt="Vaccine Icon" />
+              <img src={HEALTH_INJECTION_ICON} alt="Vaccine Icon" />
             </div>
             <h3>Vaccination Programs</h3>
             <p>Stay updated on vaccination schedules with personalized reminders</p>
@@ -266,7 +283,7 @@ const HealthWellness: React.FC = () => {
         <div className="articles-grid">
           <article className="article-card">
             <div className="article-image">
-              <img src="src/assets/images/pet-food.png" alt="Pet nutrition" />
+              <img src={HEALTH_PET_FOOD_ICON} alt="Pet nutrition" />
               <div className="article-category">Pet Health</div>
             </div>
             <div className="article-content">
@@ -280,7 +297,7 @@ const HealthWellness: React.FC = () => {
 
           <article className="article-card">
             <div className="article-image">
-              <img src="src/assets/images/pet-insurance.png" alt="Pet adoption" />
+              <img src={HEALTH_PET_INSURANCE_ICON} alt="Pet adoption" />
               <div className="article-category">Pet Welfare</div>
             </div>
             <div className="article-content">
@@ -294,7 +311,7 @@ const HealthWellness: React.FC = () => {
 
           <article className="article-card">
             <div className="article-image">
-              <img src="src/assets/images/pawfeet.png" alt="Physical health" />
+              <img src={HEALTH_PAW_FEET_ICON} alt="Physical health" />
               <div className="article-category">Human Health</div>
             </div>
             <div className="article-content">
@@ -378,7 +395,7 @@ const HealthWellness: React.FC = () => {
         <div className="testimonial-container">
           <div className="testimonial-card">
             <div className="expert-image">
-              <img src="src/assets/images/Doc1.jpg" alt="Dr. James Wilson" />
+              <img src={HEALTH_DOC_1} alt="Dr. James Wilson" />
             </div>
             <div className="expert-info">
               <h3>Dr. James Wilson</h3>
@@ -388,7 +405,7 @@ const HealthWellness: React.FC = () => {
           </div>
           <div className="testimonial-card">
             <div className="expert-image">
-              <img src="src/assets/images/Doc2.jpg" alt="Lisa Chen" />
+              <img src={HEALTH_DOC_2} alt="Lisa Chen" />
             </div>
             <div className="expert-info">
               <h3>Lisa Chen</h3>
@@ -400,16 +417,16 @@ const HealthWellness: React.FC = () => {
 
         <div className="partner-logos">
           <div className="logo-container">
-            <img src="src/assets/images/welnesssrc/medical.png" alt="Partner Clinic" />
+            <img src={HEALTH_MEDICAL_ICON} alt="Partner Clinic" />
           </div>
           <div className="logo-container">
-            <img src="src/assets/images/welnesssrc/vet.png" alt="Partner Organization" />
+            <img src={HEALTH_VET_ICON} alt="Partner Organization" />
           </div>
           <div className="logo-container">
-            <img src="src\assets\images\welnesssrc\pet-house.png" alt="Partner Shelter" />
+            <img src={HEALTH_PETHOUSE_ICON} alt="Partner Shelter" />
           </div>
           <div className="logo-container">
-            <img src="src\assets\images\welnesssrc\handshake.png" alt="Partner Association" />
+            <img src={HEALTH_HANDSHAKE_ICON} alt="Partner Association" />
           </div>
         </div>
       </section>

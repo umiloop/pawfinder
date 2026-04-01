@@ -7,6 +7,12 @@ import {
   FaFilter, FaRegSmile, FaShieldAlt, FaHandHoldingHeart 
 } from 'react-icons/fa';
 
+const ADOPT_HERO_IMAGE = new URL("../assets/images/dog-licking-smiling-owner.jpg", import.meta.url).href;
+const ADOPT_TESTIMONIAL_IMAGE_1 = new URL("../assets/images/Sucess-Story/testimo1.jpg", import.meta.url).href;
+const ADOPT_TESTIMONIAL_IMAGE_2 = new URL("../assets/images/Sucess-Story/testimo3.jpg", import.meta.url).href;
+const ADOPT_TESTIMONIAL_IMAGE_3 = new URL("../assets/images/Sucess-Story/testimo2.jpg", import.meta.url).href;
+const DEFAULT_NO_RESULTS_IMAGE = "/no-results.svg";
+
 // Define the Pet type
 interface Pet {
     petId: number;
@@ -59,17 +65,17 @@ const AdoptPage = () => {
         {
             name: "Sarah & Max",
             quote: "Adopting Max changed our lives forever. He brought so much joy and love into our home. The process was so simple with Paw Finder!",
-            image: "src/assets/images/Sucess-Story/testimo1.jpg"
+            image: ADOPT_TESTIMONIAL_IMAGE_1
         },
         {
             name: "David & Bella",
             quote: "Finding Bella on Paw Finder was the best thing that happened to us. The process was seamless and now we have the perfect addition to our family.",
-            image: "src/assets/images/Sucess-Story/testimo3.jpg"
+            image: ADOPT_TESTIMONIAL_IMAGE_2
         },
         {
             name: "Jennifer & Charlie",
             quote: "Charlie was in a shelter for months before we found him. Now he's the happiest dog in the neighborhood. Thank you Paw Finder for bringing us together!",
-            image: "src/assets/images/Sucess-Story/testimo2.jpg"
+            image: ADOPT_TESTIMONIAL_IMAGE_3
         }
     ];
 
@@ -236,7 +242,7 @@ const AdoptPage = () => {
           <section className="adopt-hero-section">
             <div className="adopt-hero-overlay" aria-hidden="true" />
             <img
-              src="/src/assets/images/dog-licking-smiling-owner.jpg"
+              src={ADOPT_HERO_IMAGE}
               alt="Happy dog with owner"
               className="adopt-hero-image"
             />
@@ -471,7 +477,7 @@ const AdoptPage = () => {
                           <h1>Shelter Pets <span className="adopt-pet-count">({displayedShelterPets.length})</span></h1>
                           {displayedShelterPets.length === 0 && (
                             <div className="adopt-no-results">
-                              <img src="src/assets/images/Sucess-Story/no pet.jpg" alt="No pets found" className="adopt-no-results-image" />
+                              <img src={DEFAULT_NO_RESULTS_IMAGE} alt="No pets found" className="adopt-no-results-image" />
                               <p>No pets found with these filters. Try adjusting your search criteria.</p>
                               <button onClick={clearFilters} className="adopt-try-again">Clear All Filters</button>
                             </div>
@@ -489,7 +495,7 @@ const AdoptPage = () => {
                           <h1>Rehome Pets <span className="adopt-pet-count">({displayedRehomePets.length})</span></h1>
                           {displayedRehomePets.length === 0 && (
                             <div className="adopt-no-results">
-                              <img src="/src/assets/images/no-results.svg" alt="No pets found" className="adopt-no-results-image" />
+                              <img src={DEFAULT_NO_RESULTS_IMAGE} alt="No pets found" className="adopt-no-results-image" />
                               <p>No pets found with these filters. Try adjusting your search criteria.</p>
                               <button onClick={clearFilters} className="adopt-try-again">Clear All Filters</button>
                             </div>

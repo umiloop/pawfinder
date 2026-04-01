@@ -13,6 +13,9 @@ import CarePic from "../assets/images/care.png";
 import TrustPic from "../assets/images/trust.png";
 import GuidePic from "../assets/images/gude.png";
 import DonatePic from "../assets/images/volunteer-img/testpii.jpeg";
+const DEFAULT_PET_IMAGE = "/default-pet.svg";
+const VOLUNTEER_WOMEN_IMAGE = new URL("../assets/images/volunteer-img/womenvol.jpg", import.meta.url).href;
+const VOLUNTEER_MALE_IMAGE = new URL("../assets/images/volunteer-img/handsome-young-guy-with-glasses-posing.jpg", import.meta.url).href;
 
 // Define the Pet type
 interface Pet {
@@ -78,7 +81,7 @@ const HomePage = () => {
         setFeaturedPets(shuffledPets.slice(0, 6).map(pet => ({
           ...pet,
           petAvailabilityStatus: "Available",
-          petPicture: pet.petPicture || "/default-pet.jpg",
+          petPicture: pet.petPicture || DEFAULT_PET_IMAGE,
           isShelterPet: pet.isShelterPet ?? false
         })));
       } catch (error) {
@@ -343,7 +346,7 @@ const HomePage = () => {
               <div className="quote-icon">❝</div>
               <p>Adopting Luna was the best decision we ever made. The PawFinder team made the process so easy and supportive.</p>
               <div className="testimonial-author">
-                <div className="author-avatar" style={{ backgroundImage: 'url(src/assets/images/volunteer-img/womenvol.jpg)' }}></div>
+                <div className="author-avatar" style={{ backgroundImage: `url(${VOLUNTEER_WOMEN_IMAGE})` }}></div>
                 <span>- Sarah & James, New York</span>
               </div>
             </div>
@@ -351,7 +354,7 @@ const HomePage = () => {
               <div className="quote-icon">❝</div>
               <p>After losing my old dog, I wasn't sure I was ready. PawFinder helped me find Max, who has brought so much joy back to my life.</p>
               <div className="testimonial-author">
-                <div className="author-avatar" style={{ backgroundImage: 'url(src/assets/images/volunteer-img/handsome-young-guy-with-glasses-posing.jpg)' }}></div>
+                <div className="author-avatar" style={{ backgroundImage: `url(${VOLUNTEER_MALE_IMAGE})` }}></div>
                 <span>- Robert, Chicago</span>
               </div>
             </div>

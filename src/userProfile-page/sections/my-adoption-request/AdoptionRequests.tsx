@@ -53,7 +53,7 @@ const PetDetailModal: React.FC<PetModalProps> = ({ isOpen, onClose, pet }) => {
               alt={pet.petName} 
               className="adoption-req-modal-pet-image"
               onError={(e) => {
-                e.currentTarget.src = '/assets/images/default-pet.jpg';
+                e.currentTarget.src = '/default-pet.svg';
               }}
             />
           </div>
@@ -309,7 +309,7 @@ const AdoptionRequests: React.FC = () => {
                   alt={request.petName} 
                   className="adoption-req-pet-image"
                   onError={(e) => {
-                    e.currentTarget.src = '/assets/images/default-pet.jpg';
+                    e.currentTarget.src = '/default-pet.svg';
                   }}
                 />
                 <div className="adoption-req-tooltip-container">

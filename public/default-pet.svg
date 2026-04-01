@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Default pet placeholder</title>
+  <desc id="desc">A simple placeholder illustration for pet images that are missing.</desc>
+  <rect width="800" height="600" rx="36" fill="#f3efe8"/>
+  <circle cx="400" cy="250" r="92" fill="#d8c7b1"/>
+  <circle cx="372" cy="232" r="14" fill="#5f4b3b"/>
+  <circle cx="428" cy="232" r="14" fill="#5f4b3b"/>
+  <path d="M390 266c10 10 20 10 30 0" stroke="#5f4b3b" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M310 198c-34-24-59-24-84-5 10 38 34 65 73 80" fill="#cbb59c"/>
+  <path d="M490 198c34-24 59-24 84-5-10 38-34 65-73 80" fill="#cbb59c"/>
+  <path d="M330 328c35 42 140 42 175 0 18 12 34 31 42 58-42 36-86 54-129 54s-87-18-129-54c8-27 24-46 41-58z" fill="#b98f6d"/>
+  <text x="400" y="532" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#7d6a59">Pet image unavailable</text>
+</svg>

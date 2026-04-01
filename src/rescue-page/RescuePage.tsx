@@ -4,6 +4,14 @@ import MissingPetCard from '../assets/components/missing-pet-card/MissingPetCard
 import { useNavigate } from "react-router-dom";
 import { RescueService } from '../service/RescueService';
 
+const RESCUE_HERO_IMAGE = new URL("../assets/images/Rescue_hero.png", import.meta.url).href;
+const RESCUE_CUTEDOG_IMAGE = new URL("../assets/images/Cutedog.png", import.meta.url).href;
+const RESCUE_GLOBAL_MARKETING_ICON = new URL("../assets/images/Global Marketing.png", import.meta.url).href;
+const RESCUE_PET_CARE_ICON = new URL("../assets/images/Pet Care.png", import.meta.url).href;
+const RESCUE_RELATIONSHIP_ICON = new URL("../assets/images/Relationship.png", import.meta.url).href;
+const RESCUE_PET_ICON = new URL("../assets/images/Pet.png", import.meta.url).href;
+const DEFAULT_PET_IMAGE = "/default-pet.svg";
+
 const RescueHeroSection: React.FC = () => {
   const navigate = useNavigate();
 
@@ -11,7 +19,7 @@ const RescueHeroSection: React.FC = () => {
     <section className="rescue-scoped-hero">
       <div className="rescue-scoped-overlay" aria-hidden="true" />
       <img
-        src="/src/assets/images/Rescue_hero.png"
+        src={RESCUE_HERO_IMAGE}
         alt="Rescue animals hero image"
         className="rescue-scoped-hero-bg"
       />
@@ -76,7 +84,7 @@ const RescueFeaturesSection: React.FC = () => (
       <div className="rescue-scoped-features-content">
         <div className="rescue-scoped-feature-img-container">
           <img
-            src="/src/assets/images/Cutedog.png"
+            src={RESCUE_CUTEDOG_IMAGE}
             alt="Happy rescued dog"
             className="rescue-scoped-feature-img"
             loading="lazy"
@@ -85,25 +93,25 @@ const RescueFeaturesSection: React.FC = () => (
         
         <div className="rescue-scoped-features-grid">
           <RescueFeatureCard
-            icon="/src/assets/images/Global Marketing.png"
+            icon={RESCUE_GLOBAL_MARKETING_ICON}
             altText="Network icon representing global reach"
             title="Largest Reach"
             description="Connecting communities to rescue and protect animals in need"
           />
           <RescueFeatureCard
-            icon="/src/assets/images/Pet Care.png"
+            icon={RESCUE_PET_CARE_ICON}
             altText="Medical care icon"
             title="Immediate Care"
             description="Providing urgent medical attention and shelter for rescued animals"
           />
           <RescueFeatureCard
-            icon="/src/assets/images/Relationship.png"
+            icon={RESCUE_RELATIONSHIP_ICON}
             altText="Home icon"
             title="Forever Homes"
             description="Helping animals find loving and permanent homes"
           />
           <RescueFeatureCard
-            icon="/src/assets/images/Pet.png"
+            icon={RESCUE_PET_ICON}
             altText="Reunion icon"
             title="Most Reunions"
             description="Reuniting lost pets with their families faster than ever"
@@ -165,7 +173,7 @@ const RescueMissingPetsSection: React.FC = () => {
                 // missingDate={new Date(pet.createdAt).toLocaleDateString()}
                 missingDate={`${pet.lastSeenDate} at ${pet.lastSeenTime}`}
                 reward={pet.offerReward ? `$${pet.rewardAmount}` : undefined}
-                imageUrl={pet.photoURLs?.[0] || "/default-pet.jpg"}
+                imageUrl={pet.photoURLs?.[0] || DEFAULT_PET_IMAGE}
               />
             ))}
           </div>
